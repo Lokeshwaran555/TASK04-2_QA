@@ -1,0 +1,20 @@
+it('Profile', function(){
+
+    cy.visit('https://dev.devmobo.com/login')
+    cy.get('#email').type('lokzz05000@gmail.com')
+    cy.get('#password').type('lokesh@52510')
+    cy.get('#loginButton').click()
+    cy.get('#associationsLink').click()
+    cy.get('#editProfile').click()
+    cy.get('#firstName').click()
+    cy.get('#firstName').click().clear().type('Lokeshwaran');
+    cy.get('#lastName').click().clear().type('Balasubramani');
+    cy.get('#loginInformationLink').click()
+    cy.get('#currentPassword').type('lokesh@52510')
+    cy.get('#newPassword').type('Lokesh@52510')
+    cy.get('#confirmNewPassword').type('Lokesh@52510')
+    cy.get('#changePasswordButton').click()
+    
+
+
+})  
